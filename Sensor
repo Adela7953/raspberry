@@ -1,0 +1,14 @@
+```
+int Sensor = 13;
+
+void setup() {
+  pinMode(Sensor,INPUT);
+  Serial.begin(9600);  
+}
+
+void loop() {
+  Serial.println(digitalRead(Sensor));
+  delay(1000);   
+  
+}
+```
