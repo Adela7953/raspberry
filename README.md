@@ -13,3 +13,34 @@ void loop() {
   delay(1000);
 }
 ```
+# influxdb install
+```
+sudo apt update
+sudo apt upgrade
+
+wget -qO- https://repos.influxdata.com/influxdb.key | sudo apt-key add -
+
+echo "deb https://repos.influxdata.com/debian stretch stable" | sudo tee /etc/apt/sources.list.d/influxdb.list
+
+sudo apt update
+sudo apt install influxdb
+
+sudo systemctl unmask influxdb
+sudo systemctl enable influxdb
+sudo systemctl start influxdb
+
+생성 : influx
+[ex) >create database <데이터베이스이름>]
+확인 : show databases 
+```
+# grafana install
+```
+wget -q -O - https://packages.grafana.com/gpg.key | sudo apt-key add -
+
+echo "deb https://packages.grafana.com/oss/deb stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list
+
+sudo apt update
+sudo apt install grafana
+
+sudo service grafana-server start
+```
