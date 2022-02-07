@@ -49,7 +49,7 @@ sudo apt install grafana
 # grafana start
 ```
 sudo service grafana-server start
-구글가서 127.0.0.1:3000
+사이트 주소: 127.0.0.1:3000
 ```
 #in Grafana
 
