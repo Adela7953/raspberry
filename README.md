@@ -28,11 +28,15 @@ sudo apt install influxdb
 sudo systemctl unmask influxdb
 sudo systemctl enable influxdb
 sudo systemctl start influxdb
+```
+#grafana databases install
 
+```
 생성 : influx
 [ex) >create database <데이터베이스이름>]
 확인 : show databases 
 ```
+
 # grafana install
 ```
 wget -q -O - https://packages.grafana.com/gpg.key | sudo apt-key add -
