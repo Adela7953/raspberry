@@ -41,6 +41,8 @@ echo "deb https://packages.grafana.com/oss/deb stable main" | sudo tee -a /etc/a
 
 sudo apt update
 sudo apt install grafana
-
+```
+# grafana start
+```
 sudo service grafana-server start
 ```
