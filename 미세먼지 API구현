@@ -1,0 +1,26 @@
+```
+from bs4 import BeautifulSoup
+from urllib.request import Request, urlopen
+from urllib.parse import urlencode, quote_plus,unquote
+import requests
+
+url =  'http://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getMsrstnAcctoRltmMesureDnsty'
+queryParams = '?' + urlencode({quote_plus('serviceKey') : 'UW90h1NRFSs3/v56pdd7JRMO/xVJF71w+2WEhWEiARundOzBx0QEITL+dqlU8Uy6yPcB+LMaNw0vXpiCNOo3kQ=='
+	, quote_plus('returntype'):'xml'
+	, quote_plus('numOfRows') : '10'
+	, quote_plus('pageNo') : '1'
+	, quote_plus('stationName') : '서창'
+	, quote_plus('dataTerm') : 'DAILY'
+	, quote_plus('ver') : '1.0'})	
+								
+res = requests.get(url+queryParams)
+soup = BeautifulSoup(res.content,'html.parser')
+data = soup.find_all('item')
+print(data)
+
+for item in data:
+	datatime = item.find('datatime')
+	pm10value = item.find('pm10value')
+	print(datatime.get_text())
+	print(pm10value.get_text())
+```
