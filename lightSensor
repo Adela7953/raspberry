@@ -13,8 +13,12 @@ void loop() {
   
 }
 ```
+
 ```
 # rasberry
+import time
+import requests, json
+from influxdb import InfluxDBClient as influxdb
 import serial
 
 port = '/dev/ttyACM0'
@@ -26,12 +30,41 @@ print(seri.name)
 
 seri.write(cmd.encode())
 
+try:
+    while True:
 
-while 1:
-	if seri.in_waiting !=0:
-	    content = seri.readline()
-	    print(content.decode())
+        if seri.in_waiting !=0:
+            content = seri.readline()
+            temp = int(content.decode())
 
+            data = [{
+                'measurement' : 'light',
+                'tags':{
+                    'office': 'hgcom',
+                 },
+                'fields':{
+                    'value': temp
+                 }
+            }]
+        else:
+             print("Read error")
+        client = None
+        try:
+            client = influxdb('localhost',8086,'root','root','light')
+        except Exception as e:
+            print("Exception" + str(e))
+        if client is not None:
+            try:
+                client.write_points(data)
+                print(data)
+            except Exception as e:
+                print("Exception wrtie" + str(e))
+            finally:
+                client.close()
+        time.sleep(1)
+except KeyboardInterrupt:
+    print("Terminated by Keyboard")
 
-
+finally:
+    print("End of Program")
 ```
