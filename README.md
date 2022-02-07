@@ -33,7 +33,7 @@ sudo systemctl start influxdb
 
 ```
 생성 : influx
-[ex) >create database <데이터베이스이름>]
+[ex) >create database <database>]
 확인 : show databases 
 ```
 
