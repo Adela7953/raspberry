@@ -49,4 +49,11 @@ sudo apt install grafana
 # grafana start
 ```
 sudo service grafana-server start
+구글가서 127.0.0.1:3000
+```
+#in Grafana
+
+```
+1.  datasourse 만들기
+2.  panel 만들기
 ```
