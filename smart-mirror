@@ -8,7 +8,7 @@ npm install
 cp config/config.js.sample config/config.js
 ```
 
-# 실행 + 종료
+# 실행 종료
 ```
 cd MagicMirror
 npm run start
@@ -138,4 +138,27 @@ apiKey: 발급받은 API KEY, location: Incheon , locationID: 1843564 로 수정
 cd MagicMirror
 start: npm run start
 stop: crl + q
+```
+
+# 뉴스 추가 설정
+```
+https://www.google.co.kr/alerts (구글에서 구글알리미 검색)으로 접속   
+검색창에 원하는 검색어 입력 후 옵션 더보기
+부채모양 오른클릭 - 링크 복사   
+geany MagicMirror/config/config.js   
+newsfeed 의 title, url 추가   
+여러개를 쓰고싶으면 {} 로 구분   
+```
+# 선택사항
+```
+-------화면 전환-------
+터미널에서 sudo raspi-config 입력
+Advanced options -> GL Driver -> GL (Full KMS) OpenGL desktop driver with full KMS 선택
+sudo reboot
+메뉴 -> 기본설정 -> Screen Configuration
+Configure -> Screens -> HDMI-1 -> 방향 -> right
+체크표시 클릭해 화면전환 후 OK 클릭
+
+-------라즈베리파이 업데이트-------
+sudo apt-get update -y && sudo apt-get upgrade-y
 ```
