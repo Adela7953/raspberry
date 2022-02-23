@@ -20,7 +20,7 @@
     -픽셀: 영상의 기본 단위 , picture element, 화소
     
   4
-
+흑백사진으로 바꾸는 명령어>
 ```#python
 import matplotlib.pyplot as plt
 import cv2
