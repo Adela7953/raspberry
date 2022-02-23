@@ -20,3 +20,21 @@
     -픽셀: 영상의 기본 단위 , picture element, 화소
     
   4
+
+```#python
+import matplotlib.pyplot as plt
+import cv2
+
+imgBGR = cv2.imread('cat.bmp')a
+imgRGB = cv2.cvtColor(imgBGR, cv2.COLOR_BGR2RGB)
+
+plt.axis('off')
+plt.imshow(imgRGB)
+plt.show()
+
+imgGray = cv2.imread('cat.bmp', cv2.IMREAD_GRAYSCALE)
+
+plt.axis('off')
+plt.imshow(imgGray, cmap='gray')
+plt.show()
+```
