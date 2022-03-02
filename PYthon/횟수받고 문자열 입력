@@ -1,0 +1,6 @@
+#Python
+```
+x = int(input("횟수 : "))
+y =input("문자열 : ")
+print((y+"/")*x)
+```
