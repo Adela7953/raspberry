@@ -1,0 +1,37 @@
+turtle.penup() : 펜을 들어올린다. ~ 펜 이동 시 라인을 그리지 않는다.
+
+turtle.pendown(): 펜을 내린다. ~ 펜 이동 시 라인을 그리며 이동한다.
+
+turtle.pensize(펜 두께): 펜의 두께를 지정한다.
+
+turtle.forward(d)	:터틀 머리가 가르키는 방향으로 d 만큼 이동
+
+turtle.backward(d)	: 터틀 꼬리 방향으로 d 만큼 이동
+
+turtle.right(angle) : 터틀을 angle 만큼 오른쪽으로 방향 전환
+
+turtle.left(angle) : 터틀을 angle 만큼 왼쪽으로 방향 전환
+
+turtle.goto(x,y) : 터틀을 (x, y) 위치로 이동
+
+turtle.setx(p) : 터틀을 x축의 p 위치로 이동
+
+turtle.sety(p) : 터틀을 y축의 p 위치로 이동.
+
+turtle.setheading(angle) : 터틀이 바라보는 방향을 angle(각도) 만큼 변경 (0 - 오른쪽, 90 - 위, 180 - 왼쪽, 270 - 아래)
+
+turtle.home() : 터틀을 (0,0)으로 이동
+
+turtle.color(c) :펜의 색을 지정한다.
+
+turtle.fillcolor(c) : 펜에 채울 색을 지정한다.
+
+turtle.begin_fill() : 색채우기를 시작한다.
+
+turtle.end_fill() : 색채우기 완료 하고 끝낸다.
+
+turtle.filling() : 색채우기 상태를 반한한다. ~ 색이 채워져 있다면 true, 채워져 있지 않다면 false
+
+turtle.clear() : 창에 출력된 모든 것을 지운다. ~ 터틀의 상태와 위치는 바뀌지 않는다.
+
+turtle.reset() : 창에 출력된 모든 것을 지우고 상태와 위치를 모두 초기화 시킨다.
