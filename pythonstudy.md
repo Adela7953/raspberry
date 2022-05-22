@@ -28,4 +28,31 @@ str.count('i')
 4
 >>> 
 
+str.strip()   양쪽에서 공백제거
+str           원래 문자열은 변화X
+str.rstrip()  오른쪽 공백제거
+strlstrip()   왼쪽 공백제거
+
+>>>s= 'a b' a와 사이에 공백이 있다
+>>>s.split() s.split(None)와 같음
+['a','b']
+>>>str='abc'
+>>>str.split('b') 문자열을 ()속의 문자로 분리
+['a','c']
+>>>'*'.join('hello') *와 문자열의 각 문자를 하나씩 결합한 문자열 생성
+'h*e*l*l*o'
+
+>>> str = 'abc'
+>>> str.center(10)
+'   abc    '
+>>> str.center(10,'-')
+'---abc----'
+>>> 'he'.rjust(5) 5자리를 오른쪽으로 정렬
+'   he'
+>>> 'he'.ljust(5) 5자리를 왼쪽으로 정렬
+'he   '
+>>> 'he'.center(5) 5자리를 가운데로 정렬
+'  he '
+>>> '12'.zfill(5) 문자열 '12'의 왼쪽을 0으로 채워 5자리를 만든다다
+'00012'
 ```
