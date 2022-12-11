@@ -50,5 +50,5 @@ sudo service grafana-server start
 ```
 # influxdb import with python
 ```
-ssudo pip3 install influxdb
+sudo pip3 install influxdb
 ```
